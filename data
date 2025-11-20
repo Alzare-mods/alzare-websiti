@@ -1,15 +1,18 @@
 productos.json
 
 [
-  {
-    "nombre": "Hoodie ALZARÉ Negro",
-    "precio": 2500,
-    "descripcion": "Hoodie negro con logo dorado premium.",
-    "imagen": "images/hoodie_alzare_negro.png",
-    "tallas": ["S", "M", "L", "XL"],
-    "colores": ["Negro", "Dorado"],
-    "categoria": "Hoodies"
-  }
-]
+   { ... producto 1 ... },
+   { ... producto 2 ... },
 
+   // PEGAR AQUÍ TU NUEVO PRODUCTO
+   {
+     "nombre": "Poloche Negro ALZARÉ",
+     "precio": 1200,
+     "descripcion": "Poloche negro básico, calidad premium.",
+     "imagen": "AQUÍ-TU-URL",
+     "tallas": ["S", "M", "L", "XL"],
+     "colores": ["Negro"],
+     "categoria": "Poloche"
+   }
+]
 img/hoodie_alzare_negro.png.webp
