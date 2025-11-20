@@ -1,12 +1,12 @@
-// script.js - funciones básicas para ALZARÉ
+// script.js - funciones básicas para ALZARE
 document.addEventListener('DOMContentLoaded', function(){
 
   const products = [
     {id:1, name:'Poloche Signature', price:'RD$1,100', img:'img/product1.jpg', desc:'Algodón premium, estampado dorado.'},
-    {id:2, name:'T-shirt Alzaré', price:'RD$900', img:'img/product2.jpg', desc:'Corte clásico, tejido suave.'},
+    {id:2, name:'T-shirt Alzare', price:'RD$900', img:'img/product2.jpg', desc:'Corte clásico, tejido suave.'},
     {id:3, name:'Pantalón Urban', price:'RD$1,500', img:'img/product3.jpg', desc:'Confort y estilo.'},
     {id:4, name:'Bañador Wave', price:'RD$800', img:'img/product4.jpg', desc:'Secado rápido.'},
-    {id:5, name:'Gorra Alzaré', price:'RD$350', img:'img/product5.jpg', desc:'Ajustable, bordado dorado.'},
+    {id:5, name:'Gorra Alzare', price:'RD$350', img:'img/product5.jpg', desc:'Ajustable, bordado dorado.'},
     {id:6, name:'Sudadera Luxe', price:'RD$2,200', img:'img/product6.jpg', desc:'Interior afelpado.'},
   ];
 
