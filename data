@@ -1,1 +1,13 @@
 productos.json
+
+[
+  {
+    "nombre": "Hoodie ALZARÉ Negro",
+    "precio": 2500,
+    "descripcion": "Hoodie negro con logo dorado premium.",
+    "imagen": "images/hoodie_alzare_negro.png",
+    "tallas": ["S", "M", "L", "XL"],
+    "colores": ["Negro", "Dorado"],
+    "categoria": "Hoodies"
+  }
+]
