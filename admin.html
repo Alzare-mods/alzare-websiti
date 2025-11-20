@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="UTF-8">
-<title>Panel de Administración - ALZARÉ</title>
+<title>Panel de Administración - ALZARE</title>
 <link rel="stylesheet" href="css/styles.css"></head>
 <body>
-<header class="admin-header"><h2>Panel ALZARÉ</h2>
+<header class="admin-header"><h2>Panel ALZARE</h2>
 <button onclick="logout()">Cerrar sesión</button></header>
 
 <section class="form-section"><h3>Agregar Producto</h3>
@@ -19,3 +19,47 @@
 
 <section class="lista-section"><h3>Productos Subidos</h3><div id="lista"></div></section>
 <script src="js/admin.js"></script></body></html>
+<script>
+async function guardarProducto(producto) {
+    const url = "https://raw.githubusercontent.com/TU-USUARIO/TU-REPO/main/data/productos.json";
+
+    let productos = [];
+
+    // 1. Leer lista actual
+    try {
+        const res = await fetch(url);
+        productos = await res.json();
+    } catch (err) {
+        console.error("No se pudo leer productos.json");
+    }
+
+    // 2. Agregar nuevo producto
+    productos.push(producto);
+
+    // 3. Guardarlos otra vez usando GitHub API
+    const apiUrl = "https://api.github.com/repos/TU-USUARIO/TU-REPO/contents/data/productos.json";
+
+    const update = {
+        message: "Nuevo producto agregado",
+        content: btoa(JSON.stringify(productos, null, 2)),
+        sha: ""
+    };
+
+    // Obtener el SHA del archivo
+    const getSha = await fetch(apiUrl);
+    const shaData = await getSha.json();
+    update.sha = shaData.sha;
+
+    // Hacer el update
+    await fetch(apiUrl, {
+        method: "PUT",
+        headers: {
+            "Authorization": "token TU_TOKEN",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(update)
+    });
+
+    alert("Producto guardado en la tienda");
+}
+</script>
