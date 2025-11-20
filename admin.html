@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8">
+<title>Panel de Administración - ALZARÉ</title>
+<link rel="stylesheet" href="css/styles.css"></head>
+<body>
+<header class="admin-header"><h2>Panel ALZARÉ</h2>
+<button onclick="logout()">Cerrar sesión</button></header>
+
+<section class="form-section"><h3>Agregar Producto</h3>
+<input id="nombre" placeholder="Nombre del producto">
+<input id="precio" placeholder="Precio">
+<input id="descripcion" placeholder="Descripción">
+<input id="tallas" placeholder="Tallas (S,M,L,XL)">
+<input id="colores" placeholder="Colores">
+<input id="cantidad" placeholder="Cantidad disponible">
+<input id="categoria" placeholder="Categoría">
+<input id="imagen" type="file" accept="image/*">
+<button onclick="guardarProducto()">Guardar Producto</button></section>
+
+<section class="lista-section"><h3>Productos Subidos</h3><div id="lista"></div></section>
+<script src="js/admin.js"></script></body></html>
